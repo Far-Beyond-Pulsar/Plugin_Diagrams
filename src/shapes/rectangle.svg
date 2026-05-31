@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Diagram shape: Rectangle with optional rounded corners.
+     Coordinate space: {w} x {h} (element dimensions in canvas pixels).
+     Template vars: {w} {h} and named params like {r}.
+     Expressions support: a+b  a-b  a*b  a/b  (left-to-right, no precedence override) -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     data-name="Rectangle"
+     data-category="General">
+
+  <!-- Parameter definitions -->
+  <param name="r" label="Corner Radius" default="0" min="0" max="50" type="float"/>
+
+  <!-- Body path (filled + stroked).
+       Rounded rectangle using Q (quadratic bezier) corner arcs. -->
+  <path role="body" d="M {r} 0 L {w-r} 0 Q {w} 0 {w} {r} L {w} {h-r} Q {w} {h} {w-r} {h} L {r} {h} Q 0 {h} 0 {h-r} L 0 {r} Q 0 0 {r} 0 Z"/>
+
+  <!-- Drag handle: pulling left adjusts corner radius.
+       Sits on the top edge at distance r from the right corner. -->
+  <handle param="r" cx="{w-r}" cy="0" axis="x" invert="true"/>
+
+</svg>

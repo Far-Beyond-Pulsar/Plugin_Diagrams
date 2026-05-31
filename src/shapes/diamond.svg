@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     data-name="Diamond"
+     data-category="General">
+
+  <path role="body" d="M {w/2} 0 L {w} {h/2} L {w/2} {h} L 0 {h/2} Z"/>
+
+</svg>

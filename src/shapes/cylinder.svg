@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     data-name="Cylinder"
+     data-category="General">
+
+  <param name="ell" label="Cap Height" default="0.2" min="0.05" max="0.45" type="float"/>
+
+  <!-- ell is the fractional height of the elliptic cap at top/bottom.
+       Body: rectangle from y=ell*h/2 to y=h-ell*h/2, plus closed bottom ellipse. -->
+
+  <!-- Closed body shape (filled):
+       Start at left edge of top-ellipse midpoint, arc around bottom, close back. -->
+  <path role="body"
+    d="M 0 {h*ell/2}
+       L 0 {h-h*ell/2}
+       A {w/2} {h*ell/2} 0 0 0 {w} {h-h*ell/2}
+       L {w} {h*ell/2}
+       A {w/2} {h*ell/2} 0 0 0 0 {h*ell/2}
+       Z"/>
+
+  <!-- Top ellipse outline drawn over fill to show the top cap -->
+  <path role="stroke"
+    d="M 0 {h*ell/2}
+       A {w/2} {h*ell/2} 0 0 1 {w} {h*ell/2}
+       A {w/2} {h*ell/2} 0 0 1 0 {h*ell/2}
+       Z"/>
+
+  <!-- Drag handle at midpoint of top ellipse -->
+  <handle param="ell" cx="{w/2}" cy="{h*ell}" axis="y" invert="false"/>
+
+</svg>

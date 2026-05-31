@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     data-name="Hexagon"
+     data-category="General">
+
+  <param name="indent" label="Indent" default="0.2" min="0.05" max="0.45" type="float"/>
+
+  <!-- indent is fraction of width that the flat side indents -->
+  <path role="body"
+    d="M {w*indent} 0
+       L {w-w*indent} 0
+       L {w} {h/2}
+       L {w-w*indent} {h}
+       L {w*indent} {h}
+       L 0 {h/2}
+       Z"/>
+
+  <!-- Drag handle on top-left indented corner -->
+  <handle param="indent" cx="{w*indent}" cy="0" axis="x" invert="false"/>
+
+</svg>

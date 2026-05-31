@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Table shape uses data-renderer="table" — the Rust renderer generates the
+     grid lines dynamically from rows/cols params. The SVG only carries metadata
+     and default params; no static body path is needed. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     data-name="Table"
+     data-category="Data"
+     data-renderer="table">
+
+  <param name="rows" label="Rows" default="3" min="1" max="20" type="int"/>
+  <param name="cols" label="Columns" default="3" min="1" max="20" type="int"/>
+
+  <!-- Handles on the bottom/right edge to drag row/col count -->
+  <handle param="rows" cx="{w/2}" cy="{h}"     axis="y" invert="false"/>
+  <handle param="cols" cx="{w}"   cy="{h/2}"   axis="x" invert="false"/>
+
+</svg>

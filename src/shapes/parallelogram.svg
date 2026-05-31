@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     data-name="Parallelogram"
+     data-category="General">
+
+  <param name="skew" label="Skew" default="0.25" min="0.0" max="0.5" type="float"/>
+
+  <!-- skew is a fraction of width; top-left is offset right by skew*w -->
+  <path role="body" d="M {w*skew} 0 L {w} 0 L {w-w*skew} {h} L 0 {h} Z"/>
+
+  <!-- Handle on top edge to drag skew amount -->
+  <handle param="skew" cx="{w*skew}" cy="0" axis="x" invert="false"/>
+
+</svg>

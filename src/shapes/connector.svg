@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Connector: a line from source to target with optional arrowheads.
+     Treated specially by the renderer — only metadata here. -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     data-name="Connector"
+     data-category="Connect"
+     data-renderer="connector">
+
+  <param name="end_arrow"   label="End Arrow"   default="1" min="0" max="1" type="int"/>
+  <param name="start_arrow" label="Start Arrow" default="0" min="0" max="1" type="int"/>
+
+</svg>

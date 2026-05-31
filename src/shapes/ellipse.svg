@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     data-name="Ellipse"
+     data-category="General">
+
+  <!-- Full ellipse: four arc segments meeting at cardinal points.
+       Uses SVG arc: A rx ry x-rot large-arc sweep x y -->
+  <path role="body"
+    d="M {w/2} 0
+       A {w/2} {h/2} 0 0 1 {w} {h/2}
+       A {w/2} {h/2} 0 0 1 {w/2} {h}
+       A {w/2} {h/2} 0 0 1 0 {h/2}
+       A {w/2} {h/2} 0 0 1 {w/2} 0
+       Z"/>
+
+</svg>
